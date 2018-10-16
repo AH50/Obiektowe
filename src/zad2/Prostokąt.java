@@ -1,4 +1,4 @@
-package obiektowe;
+package zad2;
 public class Prostokąt extends Kwadrat {
     protected double b_;
 

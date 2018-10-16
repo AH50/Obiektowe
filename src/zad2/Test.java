@@ -1,4 +1,4 @@
-package obiektowe;
+package zad2;
 
 import java.util.*;
 

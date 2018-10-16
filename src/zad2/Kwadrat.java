@@ -1,4 +1,4 @@
-package obiektowe;
+package zad2;
 public class Kwadrat {
     protected double a_;
     public Kwadrat(double a)
