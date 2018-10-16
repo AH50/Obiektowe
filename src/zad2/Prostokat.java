@@ -1,28 +1,28 @@
 package zad2;
-public class Prostokąt extends Kwadrat {
+public class Prostokat extends Kwadrat {
     protected double b_;
 
-    public Prostokąt(double a, double b)
+    public Prostokat(double a, double b)
     {
         super(a);
-        b_ = b;
+        this.b_ = b;
     }
 
     public double getB()
     {
-        return b_;
+        return this.b_;
     }
 
     public void setB(double b)
     {
-        b_ = b;
+        this.b_ = b;
     }
 
     public double area()
     {
         return a_*b_;
     }
-    public boolean isBigger(Prostokąt other)
+    public boolean isBigger(Prostokat other)
     {
         return other.area()>area();
     }

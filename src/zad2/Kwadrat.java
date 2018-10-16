@@ -3,15 +3,15 @@ public class Kwadrat {
     protected double a_;
     public Kwadrat(double a)
     {
-        a_ =a;
+        this.a_ =a;
     }
-    public double getA()
+    public double getA ()
     {
-        return a_;
+        return this.a_;
     }
-    public void setA(double a)
+    public void setA (double a)
     {
-        a_=a;
+        this.a_=a;
     }
     public double area()
     {
@@ -19,6 +19,7 @@ public class Kwadrat {
     }
     public boolean isBigger(Kwadrat other)
     {
+
         return other.a_>a_;
     }
 }
