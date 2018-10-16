@@ -10,27 +10,27 @@ public class Test {
         Test text = new Test();
         while(!exit)
         {
-            System.out.print("1.Wczytaj prostokąt \n"+
+            System.out.print(
+                    "1.Wczytaj prostokąt \n"+
                     "2.Wyświetl wszytkie prostokąty \n"+
                     "3.Oblicz sumę pól \n"+
                     "4.Koniec \n");
-            String option = read.nextLine();
-            if(option.equals("4")) exit = true;
-            else if (option.equals("1"))
+            String opcja = read.nextLine();
+            if(opcja.equals("1"))
             {
                 System.out.print("Podaj wymiary prostokąta\n");
                 Prostokat nowy = new Prostokat(read.nextDouble(),read.nextDouble());
                 read.nextLine();
                 text.prostokąty.add(nowy);
             }
-            else if (option.equals("2"))
+            else if (opcja.equals("2"))
             {
                 for (Prostokat p: text.prostokąty)
                 {
                     System.out.print("Prostokąt "+p.getA()+" na "+p.getB()+"\n");
                 }
             }
-            else if(option.equals("3"))
+            else if(opcja.equals("3"))
             {
                 double suma = 0;
                 for (Prostokat p: text.prostokąty)
@@ -38,6 +38,10 @@ public class Test {
                     suma+=p.area();
                 }
                 System.out.print("Suma pól: " + suma + "\n");
+            }
+            else if(opcja.equals("4"))
+            {
+                exit=true;
             }
         }
     }
