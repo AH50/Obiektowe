@@ -25,17 +25,17 @@ public class Test {
             }
             else if (opcja.equals("2"))
             {
-                for (Prostokat it: obj.prostokąty)
+                for (Prostokat ite: obj.prostokąty)
                 {
-                    System.out.print("Prostokąt "+it.getA()+" na "+it.getB()+"\n");
+                    System.out.print("Prostokąt "+ite.getA()+" na "+ite.getB()+"\n");
                 }
             }
             else if(opcja.equals("3"))
             {
                 double suma = 0;
-                for (Prostokat it: obj.prostokąty)
+                for (Prostokat ite: obj.prostokąty)
                 {
-                    suma=suma+it.area();
+                    suma=suma+ite.area();
                 }
                 System.out.print("Suma pól: " + suma + "\n");
             }
