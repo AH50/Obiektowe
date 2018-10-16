@@ -1,8 +1,9 @@
 package zad2;
+
 import java.util.*;
 
 public class Test {
-    private LinkedList<Prostokat> prostokąty = new LinkedList<Prostokat>();
+    private LinkedList<Prostokat> figury = new LinkedList<Prostokat>();
     public static void main(String[] args)
     {
         boolean exit = false;
@@ -21,11 +22,11 @@ public class Test {
                 System.out.print("Podaj wymiary prostokąta\n");
                 Prostokat nowy = new Prostokat(read.nextDouble(),read.nextDouble());
                 read.nextLine();
-                obj.prostokąty.add(nowy);
+                obj.figury.add(nowy);
             }
             else if (opcja.equals("2"))
             {
-                for (Prostokat ite: obj.prostokąty)
+                for (Prostokat ite: obj.figury)
                 {
                     System.out.print("Prostokąt "+ite.getA()+" na "+ite.getB()+"\n");
                 }
@@ -33,7 +34,7 @@ public class Test {
             else if(opcja.equals("3"))
             {
                 double suma = 0;
-                for (Prostokat ite: obj.prostokąty)
+                for (Prostokat ite: obj.figury)
                 {
                     suma=suma+ite.area();
                 }
