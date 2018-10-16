@@ -5,6 +5,8 @@ public class Prostokat extends Kwadrat {
     public Prostokat(double a, double b)
     {
         super(a);
+        if(b<0)
+            System.out.println("Bledne dane");
         this.b_ = b;
     }
 
@@ -22,9 +24,9 @@ public class Prostokat extends Kwadrat {
     {
         return a_*b_;
     }
-    public boolean isBigger(Prostokat other)
+    public boolean isBigger(Prostokat p1)
     {
-        return other.area()>area();
+        return p1.area()>area();
     }
 
 }

@@ -3,6 +3,8 @@ public class Kwadrat {
     protected double a_;
     public Kwadrat(double a)
     {
+        if(a<0)
+            System.out.println("Bledne dane");
         this.a_ =a;
     }
     public double getA ()
@@ -17,9 +19,9 @@ public class Kwadrat {
     {
         return a_*a_;
     }
-    public boolean isBigger(Kwadrat other)
+    public boolean isBigger(Kwadrat k1)
     {
 
-        return other.a_>a_;
+        return k1.a_>a_;
     }
 }

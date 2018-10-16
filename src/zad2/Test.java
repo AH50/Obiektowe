@@ -7,7 +7,7 @@ public class Test {
     {
         boolean exit = false;
         Scanner read = new Scanner(System.in);
-        Test text = new Test();
+        Test obj = new Test();
         while(!exit)
         {
             System.out.print(
@@ -21,21 +21,21 @@ public class Test {
                 System.out.print("Podaj wymiary prostokąta\n");
                 Prostokat nowy = new Prostokat(read.nextDouble(),read.nextDouble());
                 read.nextLine();
-                text.prostokąty.add(nowy);
+                obj.prostokąty.add(nowy);
             }
             else if (opcja.equals("2"))
             {
-                for (Prostokat p: text.prostokąty)
+                for (Prostokat it: obj.prostokąty)
                 {
-                    System.out.print("Prostokąt "+p.getA()+" na "+p.getB()+"\n");
+                    System.out.print("Prostokąt "+it.getA()+" na "+it.getB()+"\n");
                 }
             }
             else if(opcja.equals("3"))
             {
                 double suma = 0;
-                for (Prostokat p: text.prostokąty)
+                for (Prostokat it: obj.prostokąty)
                 {
-                    suma+=p.area();
+                    suma=suma+it.area();
                 }
                 System.out.print("Suma pól: " + suma + "\n");
             }
