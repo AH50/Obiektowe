@@ -68,7 +68,7 @@ public class EmailMessage {
         private LinkedList<String> bcc = new LinkedList();
 
         public Builder addFrom(String from_){
-            if(isValidEmail(from_)) {
+            if(Emailcheck(from_)) {
                 this.from = from_;
             }
             else
@@ -80,7 +80,7 @@ public class EmailMessage {
         }
         public Builder addTo(String to_)
             {
-            if(isValidEmail(to_)) {
+            if(Emailcheck(to_)) {
                 this.to.add(to_);
             }
             else
@@ -118,7 +118,7 @@ public class EmailMessage {
         {
             return new EmailMessage(this.from, this.to, this.subject, this.content, this.mimeType, this.cc, this.bcc);
         }
-        public static boolean isValidEmail(String email)
+        public static boolean Emailcheck(String email)
         {
             boolean result = true;
             try{
