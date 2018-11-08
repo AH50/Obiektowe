@@ -1,7 +1,7 @@
 {328}{527}/Na wysokości 600 kilometrów temperatura waha się|/między 126 a -100 stopniami Celsjusza.
 {544}{681}/Dźwięk się nie niesie.|/Nie ma ciśnienia ani tlenu.
 {755}{858}/Życie w kosmosie jest niemożliwe.
-{87c5}{949}GRAWITACJA
+{875}{949}GRAWITACJA
 {954}{1014}.:: GrupaHatak.pl ::.
 {1017}{1081}Tłumaczenie:|rarehare & józek
 {1539}{1674}/Proszę o potwierdzenie, że pierwsza i druga|/część obudowy dysku P1 zostały usunięte.
