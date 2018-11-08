@@ -13,13 +13,13 @@ public class Delay {
 
         Scanner scan = new Scanner(input);
         Pattern pattern = Pattern.compile("\\{(\\d+)\\}\\{(\\d+)\\}(.*)");
-        StringBuilder result = new StringBuilder();
+
         int nrLine=0;
 
         while (scan.hasNextLine()) {
             String line = scan.nextLine();
             Matcher match = pattern.matcher(line);
-
+            StringBuilder result = new StringBuilder();
             if (match.find()) {
                 int start = Integer.parseInt(match.group(1)) + (delay * fps / 1000);
                 int end = Integer.parseInt(match.group(2)) + (delay * fps / 1000);
