@@ -1,21 +1,21 @@
 package sample;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.TilePane;
 import javafx.stage.DirectoryChooser;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 
 public class Gallery extends Application {
 
@@ -25,7 +25,7 @@ public class Gallery extends Application {
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
 
-        GridPane root = new GridPane();
+        ScrollPane root = new ScrollPane();
         TilePane tile = new TilePane();
         tile.setHgap(50);
         String path = null;
@@ -52,9 +52,10 @@ public class Gallery extends Application {
             tile.getChildren().addAll(image);
         }
 
-        root.getChildren().addAll(tile);
-        primaryStage.setWidth(800);
-        primaryStage.setHeight(800);
+        root.setContent(tile);
+
+        primaryStage.setWidth(1000);
+        primaryStage.setHeight(1000);
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
