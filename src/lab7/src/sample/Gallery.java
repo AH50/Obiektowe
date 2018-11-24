@@ -1,5 +1,4 @@
 package sample;
-import java.awt.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.TilePane;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -28,10 +28,20 @@ public class Gallery extends Application {
         GridPane root = new GridPane();
         TilePane tile = new TilePane();
         tile.setHgap(50);
+        String path = null;
         primaryStage.setTitle("Galeria zdjęć");
 
+        DirectoryChooser directory = new DirectoryChooser();
+        File selected = directory.showDialog(stage);
+
+        if(selected == null){
+            path="zdjecia";
+        }else{
+            path = selected.getAbsolutePath();
+        }
+
         primaryStage.getIcons().add(new Image("https://png.pngtree.com/svg/20161012/gallery_1245283.png"));
-        String path = "zdjecia";
+
 
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
