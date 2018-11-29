@@ -4,8 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
-import java.sql.SQLException;
-
 
 public class Controller {
 
@@ -44,7 +42,7 @@ public class Controller {
     public void bClear(){
         lista.getItems().clear();
     }
-    public void adddata() throws SQLException {
+    public void adddata(){
         DBConnect connect = new DBConnect();
 
         connect.addData("'"+addISBN.getText()+"'"+",'"+addTitle.getText()+"','"+addAuthor.getText()+"',"+addYear.getText());

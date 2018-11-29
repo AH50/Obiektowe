@@ -72,7 +72,13 @@ public class DBConnect {
         }
         return lista;
     }
-    public void addData(String values) throws SQLException {
-        st.executeUpdate("INSERT INTO books VALUES (" + values + ")");
+    public void addData(String values){
+
+        try {
+            st.executeUpdate("INSERT INTO books VALUES (" + values + ")");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Blad podczas wstawiania wartosci!!!");
+        }
     }
 }
