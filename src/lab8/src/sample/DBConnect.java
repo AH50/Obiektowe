@@ -1,7 +1,5 @@
 package sample;
 
-import javafx.scene.control.ListView;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +13,7 @@ public class DBConnect {
 
     public  DBConnect(){
         int tries = 0;
-        while(tries < 3) {
+        while(tries < 3) { //trzykrotna automatyczna próba połączenia się z bazą danych
             try {
                 Class.forName("com.mysql.jdbc.Driver").newInstance();
                 conn = DriverManager.getConnection("jdbc:mysql://mysql.agh.edu.pl/user",
@@ -28,7 +26,7 @@ public class DBConnect {
                     tries++;
                 }
                 if(conn==null && tries==2) {
-                    System.out.println("Brak połączenia!!! Zamykamy program xD");
+                    System.out.println("Brak połączenia! Zamykamy program! Bład podczas trzykrotnego łączenia się z bazą!");
                     System.out.println("SQLException: " + ex.getMessage());
                     System.out.println("SQLState: " + ex.getSQLState());
                     System.out.println("VendorError: " + ex.getErrorCode());
